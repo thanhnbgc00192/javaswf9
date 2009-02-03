@@ -1,0 +1,33 @@
+<project name="SWF9" default="dist" basedir=".">
+    
+	<!-- set global properties for this build -->
+	<property name="src" location="src"/>
+    <property name="bin" location="bin"/>
+ 
+    <target name="init">
+        <tstamp/>
+        <mkdir dir="${bin}"/>
+    </target>
+
+    <target name="compile" depends="init" description="compile the source">
+        <javac srcdir="${src}" destdir="${bin}"/>
+    </target>
+
+    <target name="dist" depends="compile" description="generate the distribution">
+        
+		<delete file="SWF9.jar"/>
+        <delete file="MANIFEST.MF"/>
+		
+        <manifest file="MANIFEST.MF">
+            <attribute name="Main-Class" value="swf9.SWF9"/>
+        </manifest>
+        
+		<jar jarfile="SWF9.jar" basedir="${bin}"/>
+		
+    </target>
+
+    <target name="clean" description="clean up" >
+		<delete dir="${bin}"/>
+    </target>
+	
+</project>
