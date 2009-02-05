@@ -105,6 +105,29 @@ public class SWF9 {
 	
 	/**
      * SWF9 Constructor.
+     * @param file SWF file to parse
+     */
+	public SWF9(String file) {
+		
+		length = 0;
+		
+		hdr = new Header(new File(file));
+		
+		try {
+			swf = new byte[hdr.FileLength];
+			fis = new FileInputStream(file);
+			fis.read(swf);
+			fis.close();
+		} catch(IOException e) {
+			System.err.println( e );
+		}
+
+		parse(swf);
+
+	}
+	
+	/**
+     * SWF9 Constructor.
      * @param data SWF bytes array to parse
      */
 	public SWF9(byte[] data) {
