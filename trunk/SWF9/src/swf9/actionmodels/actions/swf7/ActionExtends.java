@@ -1,4 +1,4 @@
-package swf9.types.actions.swf7;
+package swf9.actionmodels.actions.swf7;
 /**
  * Copyright (c) 2008  Stefano Cottafavi and .:: A Quarter to Seven ::.
  * 
@@ -11,8 +11,8 @@ package swf9.types.actions.swf7;
  * Please visit http://www.stefanocottafavi.com for more information
 **/
 
-import swf9.types.actions.Action;
+import swf9.actionmodels.actions.Action;
 
-public class ActionDefineFunction2 extends Action {
+public class ActionExtends extends Action {
 
 }

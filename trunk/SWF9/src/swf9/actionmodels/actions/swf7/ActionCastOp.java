@@ -1,4 +1,4 @@
-package swf9.types.actions.swf3;
+package swf9.actionmodels.actions.swf7;
 /**
  * Copyright (c) 2008  Stefano Cottafavi and .:: A Quarter to Seven ::.
  * 
@@ -11,8 +11,8 @@ package swf9.types.actions.swf3;
  * Please visit http://www.stefanocottafavi.com for more information
 **/
 
-import swf9.types.actions.Action;
+import swf9.actionmodels.actions.Action;
 
-public class ActionStop extends Action {
+public class ActionCastOp extends Action {
 
 }
